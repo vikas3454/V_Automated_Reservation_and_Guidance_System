@@ -1,0 +1,21 @@
+// routes/reservations.js
+const express = require('express');
+const router = express.Router();
+const mysql = require('mysql');
+const connection = require('../config/db'); // Assuming you have a database connection
+
+// API to get reservation history by user ID
+router.get('/booking-history/:userId', (req, res) => {
+  const userId = req.params.userId;
+  
+  // Query the database to fetch reservations by user ID
+  const query = 'SELECT * FROM reservations WHERE user_id = ?';
+  connection.query(query, [userId], (err, results) => {
+    if (err) {
+      return res.status(500).json({ message: 'Error fetching booking history' });
+    }
+    res.json(results); // Send the result back to the client
+  });
+});
+
+module.exports = router;

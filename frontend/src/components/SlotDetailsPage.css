@@ -1,0 +1,161 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f8ff;
+  min-height: 100vh;
+}
+
+.slot-details-page {
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #dbeafe, #f0f8ff);
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 50px; /* Space for the back button */
+}
+
+.header {
+  padding: 10px;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 26px;
+  color: #007bff;
+}
+
+.legend {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.legend-box {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+
+.legend-box.available {
+  background-color: #4CAF50;
+}
+
+.legend-box.reserved {
+  background-color: #FFD700;
+}
+
+.legend-box.maintenance {
+  background-color: #FF0000; /* Red */
+}
+
+
+
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Ensures 5 slots per row */
+  gap: 20px;
+  justify-items: center;
+  grid-auto-rows: 120px; /* Ensures a uniform height for slots */
+  margin-bottom: 40px; /* Add margin to prevent overlap with the back button */
+}
+
+.slot {
+  background-color: lightgrey;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slot h3 {
+  font-size: 20px;
+  margin: 10px 0 5px 0;
+}
+
+.slot p {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.slot:hover {
+  transform: translateY(-5px);
+}
+
+.slot-details-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url('../images/img2.webp'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+}
+
+.entry-exit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.entry-exit .entry, .entry-exit .exit {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.entry-exit .entry {
+  padding-right: 10px;
+}
+
+.entry-exit .exit {
+  padding-left: 10px;
+}
+
+.car-icon {
+  font-size: 30px; /* Adjust size of the car icon */
+  margin-top: 10px;
+}
+
+.back-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

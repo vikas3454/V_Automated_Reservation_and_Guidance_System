@@ -1,0 +1,140 @@
+/* Full-page layout */
+.active-bookings-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 20px;
+}
+
+/* Heading */
+.active-bookings-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Booking card */
+.active-booking-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  max-width: 1000px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  margin-bottom: 25px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.active-booking-card:hover {
+  transform: scale(1.03);
+}
+
+/* Left side (details) */
+.active-booking-details {
+  flex: 2;
+}
+
+.active-booking-details h3 {
+  font-size: 22px;
+  color: #007bff;
+  margin-bottom: 12px;
+}
+
+.active-booking-details p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* Right side (circular timer) */
+.active-booking-timer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}
+
+/* Buttons */
+.active-booking-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.active-booking-btn {
+  width: 140px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background 0.2s ease-in-out;
+}
+
+/* Extend button */
+.active-booking-extend-btn {
+  background: #007bff;
+  color: white;
+}
+
+.active-booking-extend-btn:hover {
+  background: #0056b3;
+}
+
+/* Cancel button */
+.active-booking-cancel-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.active-booking-cancel-btn:hover {
+  background: #b02a37;
+}
+
+/* View Map button */
+.active-booking-map-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.active-booking-map-btn:hover {
+  background-color: #218838;
+}
+
+.parked-time-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-button {
+  background-color: #ffcc00;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.price-button:hover {
+  background-color: #ffdb4d;
+}
+
