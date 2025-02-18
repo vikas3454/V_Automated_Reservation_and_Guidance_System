@@ -5,7 +5,8 @@ body, html {
   font-family: 'Roboto', sans-serif;
   height: 100%;
   background-color: var(--background-color);
-  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 /* Root Variables */

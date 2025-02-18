@@ -9,6 +9,7 @@ import SlotDetailsPage from "./components/SlotDetailsPage";
 import ReservationPage from './components/ReservationPage';
 import BookingHistoryPage from "./components/bookingHistoryPage";
 import ActiveBookingsPage from "./components/ActiveBookingsPage";
+import Profile from "./components/Profile";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/reservation" element={<ReservationPage />} />
           <Route path="/BookingHistoryPage" element={<BookingHistoryPage/>} />
           <Route path="/ActiveBookingsPage" element={<ActiveBookingsPage/>} />
+          <Route path="/Profile" element={<Profile/>} />
         </Routes>
       </div>
     </Router>

@@ -62,6 +62,7 @@ const SlotDetailsPage = () => {
           <span><div className="legend-box reserved"></div> Reserved</span>
           <span><div className="legend-box maintenance"></div> Under Maintenance</span>
           <span>🚗 Occupied</span>
+          <button className="back-button" onClick={() => navigate(-1)}>Back</button>
         </div>
       </div>
 
@@ -75,11 +76,12 @@ const SlotDetailsPage = () => {
               onClick={() => handleSlotClick(slot)}
             >
               {slot.state === 2 ? (
-                <span className="car-icon">🚗</span>
+                <span className="car-icon"><h3>Slot {slot.id}</h3>
+                🚗</span>
               ) : (
                 <>
                   <h3>Slot {slot.id}</h3>
-                  <p style={{ color: slot.state === 3 ? 'red' : 'black' }}>
+                  <p style={{ color: slot.state === 3 ? 'black' : 'black' }}>
                     {slot.state === 0 ? 'Available' : slot.state === 1 ? 'Reserved' : 'Under Maintenance'}
                   </p>
                 </>
@@ -90,10 +92,6 @@ const SlotDetailsPage = () => {
           <p>No slots available.</p>
         )}
       </div>
-
-      <button className="back-button" onClick={() => navigate(-1)}>
-        Back
-      </button>
     </div>
   );
 };

@@ -164,7 +164,7 @@ const Dashboard = () => {
             <div className="dropdown-content">
               {user ? (
                 <>
-                  <button onClick={() => setActivePage("profile")}>Profile</button>
+                  <button onClick={() => navigate("/profile")}>Profile</button>
                   <button onClick={handleLogout}>Logout</button>
                 </>
               ) : (

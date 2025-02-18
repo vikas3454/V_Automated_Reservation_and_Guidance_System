@@ -3,7 +3,9 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* To prevent horizontal scroll */
+ /* To prevent horizontal scroll */
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 /* General Styling */

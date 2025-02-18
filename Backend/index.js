@@ -10,6 +10,7 @@ const BookingHistoryPage = require("./routes/bookingHistory");
 const payment = require("./routes/payment");
 const activebooking = require("./routes/activebooking");
 const extend = require("./routes/extend");
+const eprofile = require("./routes/eprofile");
 
 
 
@@ -41,6 +42,7 @@ app.use("/", activebooking);
 
 app.use("/api/reservations", extend);
 
+app.use("/routes", eprofile);
 //app.use("/api/reservations/cancel",cancel);
 
 
